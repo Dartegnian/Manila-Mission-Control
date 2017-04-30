@@ -1,5 +1,4 @@
 ![MMC](https://1.bp.blogspot.com/-kVZoupqu4eQ/WQZZMxe7ZxI/AAAAAAAAA3k/pqTu0PqlGQwYdLU4I7HDN4noI0t_6HrfQCLcB/s350/MMClogo.png)
-# Manila Mission Control
 This is the project we made for the "Dictionary of Earth" category. This is a working prototype, though, so some features may be incomplete or be buggy (*at the very least*, it's actually a **working** prototype and not a PowerPoint concept). The development status of this project is currently **CANCELLED OR DELAYED** as the developers are currently busy with other things.
 
 ## Usage
