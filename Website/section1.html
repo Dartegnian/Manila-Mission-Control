@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manila Mission Control</title>
+	<link rel="stylesheet" type="text/css" href="Resources/NASAlaunch.css">
+	<link rel="icon" type="image/png" href="Resources/Images/MMClogo.png">
+	<meta name="viewport" content="width=device-width" />
+	<script src='Resources/jquery.min.js'></script>
+	<script src='Resources/textrotator.js'></script>
+	<script src='Resources/fluidvids.js'></script>
+	<script>
+		$(document).ready(function(){
+			$(".slogan .rotate").textrotator({
+				animation: "flipCube",
+				speed: 2500
+			});
+		});
+		function Redirect() {
+               window.location="http://localhost/SPACEAPPS/portal.html";
+        }
+		$(function() {
+			$(".buttspecial").click(function() {
+				$("body,html").animate({
+					scrollTop: 0
+				}, 4500);
+				return false
+			})
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="Resources/textrotator.css" />
+</head>
+<body>
+	<div id="fullwidth" style="height: 65px;">
+		<h1 style="display: inline;"> <img id="logo" src="Resources\Images\MMCwordmark.png"\></h1>
+	</div>
+	<header id="header1">
+		<h1 class="slogan"><span class="rotate">NASA'S MANILA INFORMATION CENTER, WHERE DREAMERS ARE BORN, AND SCIENTISTS COME TO PLAY, START YOUR MISSION TODAY</span></h1>
+		<button class="buttinvert" onclick="Redirect()">Launch Idea</button>
+	</header>
+	<div class="mainbody">
+		<div id="imagecontainer">
+			<div id="image1container" class="images" style="padding-bottom: 4.5%">
+				<a href="http://localhost/TAMAHACK/project1.php" target='_blank'>
+					<img src="Resources\Images\diwata-1.jpg"\>
+				</a>
+			</div>
+			<div id="otherimages">
+				<div id="image2container" class="images">
+					<a href="http://localhost/TAMAHACK/project5.php" target='_blank'>
+						<img src="Resources\Images\diwata-2.jpg"\>
+					</a>
+				</div>
+				<div id="image3container" class="images">
+					<a href="http://localhost/TAMAHACK/project3.php" target='_blank'>
+						<img src="Resources\Images\diwata-3.jpg"\>
+					</a>
+				</div>
+			</div>
+		</div>
+		<aside id="infospace">
+			<h2>Vision</h2>
+			<p class="firsttwo">Regarding this Website and Mobile App, we aim to increase the transparency between the government and our fellow Filipino citizens. We do this by displaying almost all the activities of the government in this website and mobile app so that our fellow citizen may view those activities for them to be informed. The best way for the government to connect to the people and vice versa is to be informed of the activities they currently do. </p>
+			<br/>
+			<h2>Mission</h2>
+			<p class="firsttwo">Our group aims to help the Philippines to have a greener, cleaner, and prosperous society through technology powered by innovations and creativity. Technology can do so much with so little, but it’s a shame that we can do little with so much technology. Our team aims to unleash and utilize technology to connect people so that together we can make a change for a better environment.</p>
+			<br>
+			<h2>Accomplishments</h2>
+			<p>Since 2016 this team has been helping Asia Pacific College to lessen the spread of computer virus, through thorough research and determination they succeeded and their project continues to this day. Their aim to accomplish their Vision never ceases as they keep on developing and innovating to help the society to become greener and better. One of their greatest achievement is the Cyclicity App, the app has reduced the pollution in the Philippines to at least 60% compared to the other years.</p>
+		</aside>
+	</div>
+	<div class="header2">
+		<div id="leftcontain">
+			<h1>Live Satellite Feed</h1>
+			<p>Ever since its founding in the year 1958, NASA's main goal was to make the world a smaller place, and a haven for scientists, budding enthusiasts, and civilians alike. Ever since then, they have launched numerous satellites&mdash;all with their own special purpose&mdash;in order to closely monitor the Earth and the stars.</p>
+			<br/>
+			<p>Through Manila Mission Control, YOU will have access to NASA's satellites orbiting from space. All free, 24/7. All with no catches and with no limits. Feel free to explore the boundaries of the Philippines through NASA's satellites.</p>
+			<br/>
+			<p>Feel free to use NASA's satellites to track storms, check weather conditions, see local attractions&mdash;all from the view of space and within the comfort of your own home (or any place where an Internet connection is possible).</p>
+			<br/>
+			<p>Watch real-time updates on the Philippines and in other parts of the world as NASA's satellites take continouous snapshots of the country as they orbit around the world.</p>
+			<br/><br/>
+			<button class="contactbutt" onclick="Redirect2()">Check Satellite Feed</button>
+		</div>
+	</div>
+	<div class="mainbody" style="padding-bottom: 90px;">
+		<h1>Trending News Articles</h1>
+		<div id="mainarticle">
+			<a href="http://localhost/TAMAHACK/article1.php" target='_blank'>
+				<img class="demarticles" src="Resources\Images\Articles\Article1.jpg"\>
+			</a>
+		</div>
+		<div id="otherarticles">
+			<div class="leftarticlecontainer">
+				<a href="http://localhost/TAMAHACK/article2.php" target='_blank'>
+					<img class="demarticles" src="Resources\Images\Articles\Article2.jpg"\>
+				</a>
+			</div>
+			<div class="rightarticlecontainer">
+				<a href="http://localhost/TAMAHACK/article3.php" target='_blank'>
+					<img class="demarticles" src="Resources\Images\Articles\Article3.jpg"\>
+				</a>
+			</div>
+			<div class="leftarticlecontainer">
+				<a href="http://localhost/TAMAHACK/article4.php" target='_blank'>
+					<img class="demarticles" src="Resources\Images\Articles\Article4.jpg"\>
+				</a>
+			</div>
+			<div class="rightarticlecontainer">
+				<a href="http://localhost/TAMAHACK/article5.php" target='_blank'>
+					<img class="demarticles" src="Resources\Images\Articles\Article5.jpg"\>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="header2" id="vidcontainer" style="padding: 0 !important; background: #000328 !important;">
+		<h1>Virtual Reality NASA Demo</h1>
+		<div id="videoWrapper">
+			<div id="videoContainer"></div>
+		</div>
+		<script>
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			var videoContainer;
+			function onYouTubeIframeAPIReady() {
+				videoContainer = new YT.Player('videoContainer', {
+					width: '1920',
+					height: '1080',
+					videoId: '9oEsN9A9bmw',
+					playerVars: {'controls': 0,'rel': 0,'showinfo': 0, 'vq': 'hd1080', 'modestbranding': 1},
+					events: {  
+						'onReady': onPlayerReady  
+					} 
+				});
+			}
+			function onPlayerReady(event) {  
+				event.target.setPlaybackQuality("hd1080");
+			}
+    </script>
+	</div>
+	<div class="mainbody" style="padding-bottom: 90px;">
+		<h1>Top Dictionary Entries</h1>
+		<div id="entrycontainer">
+			<div id="entry" style="float: left">
+				<h6>1</h6>
+				<h5>Hybrid Computer</h5>
+				<p>Hybrid computers are generally seen as devices that combine analog and  digital components.</p>
+				<img src="Resources/Images/5star.png"\>
+			</div>
+			<div id="entry" style="float: right">
+				<h6>3</h6>
+				<h5>analog signal</h5>
+				<p>An analog signal is any time-varying and continuous signal whose time-variance quantity acts as an indicator to another time-varying signal.</p>
+				<img src="Resources/Images/4star.png"\>
+			</div>
+			<div id="entry" style="float: left">
+				<h6>2</h6>
+				<h5>coefficient</h5>
+				<p>Coefficients are multipliers or factors that measure some properts.</p>
+				<img src="Resources/Images/4star.png"\>
+			</div>
+		</div>
+	</div>
+	<header id="header1" style="background: url(Resources/Images/stars.jpg); background-size: cover; background-attachment: fixed;">
+		<h1 class="slogan">START YOUR MISSION TODAY</h1>
+		<button class="buttspecial">LIFTOFF</button>
+	</header>
+	<footer>
+		<a href="Resources\Images\NASAlogo.png" target='_blank'>
+			<img src="Resources\Images\NASAlogo.png"\>
+		</a>
+		<div class="footcontain">
+			<h4>About NASA</h4>
+			<p>Learn more about the National Aeronautics and Space Administration, its projects, how it functions, and the people behind it. </p>
+			<ul>
+			<li><a href="https://www.nasa.gov/">NASA website</a></li>
+			<li><a href="https://www.nasa.gov/about/index.html">About NASA</a></li>
+			<li><a href="https://www.nasa.gov/about/people">People at NASA</a></li>
+			</ul>
+		</div>
+		<div class="footcontain">
+			<h4>Missions</h4>
+			<ul>
+			<li><a href="https://www.nasa.gov/mission_pages/station/main/index.html">International Space Station</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/juno/main/index.html">Juno: Mission at Jupiter</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/newhorizons/main/index.html">New Horizons: Pluto and Beyond</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/cassini/main/index.html">Cassini Mission at Saturn</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/msl/index.html">Curiousity Mars Rover</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/hubble/main/index.html">Hubble Space Telescope</a></li>
+			<li><a href="https://www.nasa.gov/missions/">All Missions (A-Z)</a></li>
+			<li><a href="https://www.nasa.gov/launchschedule">Launches and Landings</a></li>
+			</ul>
+		</div>
+		<div class="footcontain">
+			<h4>Other NASA Links</h4>
+			<ul>
+			<li><a href="http://blogs.nasa.gov/">Blog</a></li>
+			<li><a href="https://www.nasa.gov/about/exhibits/index.html">Exhibit</a></li>
+			<li><a href="https://www.nasa.gov/multimedia/nasatv/index.html">NASA TV</a></li>
+			<li><a href="https://www.nasa.gov/connect/apps.html">NASA Apps</a></li>
+			<li><a href="https://www.nasa.gov/socialmedia">Social Media</a></li>
+			<li><a href="https://www.nasa.gov/content/ultra-high-definition-video-gallery/index.html">Video Galleries</a></li>
+			<li><a href="https://www.nasa.gov/multimedia/imagegallery/index.html">Image Galleries</a></li>
+			</ul>
+		</div>
+	</footer>
+	<footer id="apcfooter">
+		<center>Coded with <a href="Resources\Images\APC-Hymn.jpg">&#10084;</a> by the students of <a href="https://apc.edu.ph/" target='_blank'>Asia Pacific College</a></center>
+	</footer>
+</body>
+</html>

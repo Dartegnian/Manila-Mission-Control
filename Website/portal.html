@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manila Mission Control</title>
+	<link rel="stylesheet" type="text/css" href="Resources/NASAlaunch.css">
+	<link rel="icon" type="image/png" href="Resources/Images/MMClogo.png">
+	<meta name="viewport" content="width=device-width" />
+	<script src='Resources/jquery.min.js'></script>
+	<script src='Resources/textrotator.js'></script>
+	<script src='Resources/fluidvids.js'></script>
+	<script>
+		$(document).ready(function(){
+			$(".slogan .rotate").textrotator({
+				animation: "flipCube",
+				speed: 2500
+			});
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="Resources/textrotator.css" />
+</head>
+<body>
+	<div id="fullwidth" style="height: 65px;">
+		<h1 style="display: inline;"> <a href="http://localhost/SPACEAPPS/index.html"><img id="logo" src="Resources\Images\MMCwordmark.png"\></a></h1>
+	</div>
+	<header id="header1" style="background: url(Resources/Images/liftoff.jpg); background-attachment: fixed; background-size: cover; height: 600px">
+		<div id="leftcontain" style="margin-top: 40px;">
+			<h1>Pick Your Destination</h1>
+			<p>Greetings, you must be our new recruit! Welcome to NASA's Manila Mission Control! Here is where you'll be making your first and (hopefully) continouous steps towards a greater knowledge of the world around you.</p>
+			<br/>
+			<p>Feel free to pick from one of the chosen categories below. All sections and/or categories offer a rich and inviting experience so as to not let you get bored easily.</p>
+			<br/>
+			<p>We suggest starting with the dictionary. There you'll find various terminologies that astonauts and other scientists use to describe the world around them. Have a look around and, if you understand the concept better, we highly encourage you to submit your own definition of the term.</p>
+			<br/>
+			<p>Last but certainly not the least, we cannot recommend you enough how breathtaking our new VR portal is. It contains videos from key NASA personnel and some videos gathered using NASA's various instruments (satellites, weather balloons, etc.) and it offers a rich, virtual reality experience that can be experienced with Google Fiber or by just clicking and dragging the mouse around! No special equipment needed, just a screen and you fan freely watch them at your own leisure and from anywhere in the world.</p>
+		</div>
+	</header>
+	<div class="mainbody" style="margin: 0; padding: 0;">
+		<a href="dictionary.php">
+			<img class="sectionimage leftimage" src="Resources\Images\Sections\Section1.jpg"\>
+		</a>
+		<a href="satellite.html">
+			<img class="sectionimage right" src="Resources\Images\Sections\Section2.jpg"\>
+		</a>
+		<a href="section3.html">
+			<img class="sectionimage leftimage" src="Resources\Images\Sections\Section3.jpg"\>
+		</a>
+		<a href="vr.html">
+			<img class="sectionimage right" src="Resources\Images\Sections\Section4.jpg"\>
+		</a>
+		<a href="nasatv.html">
+			<img class="sectionimage leftimage" src="Resources\Images\Sections\Section5.jpg"\>
+		</a>
+		<a href="section6.html">
+			<img class="sectionimage right" src="Resources\Images\Sections\Section6.jpg"\>
+		</a>
+	</div>
+	<footer>
+		<a href="Resources\Images\NASAlogo.png" target='_blank'>
+			<img src="Resources\Images\NASAlogo.png"\>
+		</a>
+		<div class="footcontain">
+			<h4>About NASA</h4>
+			<p>Learn more about the National Aeronautics and Space Administration, its projects, how it functions, and the people behind it. </p>
+			<ul>
+			<li><a href="https://www.nasa.gov/">NASA website</a></li>
+			<li><a href="https://www.nasa.gov/about/index.html">About NASA</a></li>
+			<li><a href="https://www.nasa.gov/about/people">People at NASA</a></li>
+			</ul>
+		</div>
+		<div class="footcontain">
+			<h4>Missions</h4>
+			<ul>
+			<li><a href="https://www.nasa.gov/mission_pages/station/main/index.html">International Space Station</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/juno/main/index.html">Juno: Mission at Jupiter</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/newhorizons/main/index.html">New Horizons: Pluto and Beyond</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/cassini/main/index.html">Cassini Mission at Saturn</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/msl/index.html">Curiousity Mars Rover</a></li>
+			<li><a href="https://www.nasa.gov/mission_pages/hubble/main/index.html">Hubble Space Telescope</a></li>
+			<li><a href="https://www.nasa.gov/missions/">All Missions (A-Z)</a></li>
+			<li><a href="https://www.nasa.gov/launchschedule">Launches and Landings</a></li>
+			</ul>
+		</div>
+		<div class="footcontain">
+			<h4>Other NASA Links</h4>
+			<ul>
+			<li><a href="http://blogs.nasa.gov/">Blog</a></li>
+			<li><a href="https://www.nasa.gov/about/exhibits/index.html">Exhibit</a></li>
+			<li><a href="https://www.nasa.gov/multimedia/nasatv/index.html">NASA TV</a></li>
+			<li><a href="https://www.nasa.gov/connect/apps.html">NASA Apps</a></li>
+			<li><a href="https://www.nasa.gov/socialmedia">Social Media</a></li>
+			<li><a href="https://www.nasa.gov/content/ultra-high-definition-video-gallery/index.html">Video Galleries</a></li>
+			<li><a href="https://www.nasa.gov/multimedia/imagegallery/index.html">Image Galleries</a></li>
+			</ul>
+		</div>
+	</footer>
+	<footer id="apcfooter">
+		<center>Coded with <a href="Resources\Images\APC-Hymn.jpg">&#10084;</a> by the students of <a href="https://apc.edu.ph/" target='_blank'>Asia Pacific College</a></center>
+	</footer>
+</body>
+</html>
