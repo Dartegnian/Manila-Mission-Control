@@ -1,2 +1,2 @@
-# Manila-Mission-Control
+# Manila Mission Control
 This is the project we made for the "Dictionary of Earth" category. This is a working prototype, though, so some features may be incomplete or be buggy (*at the very least*, it's actually a **working** prototype and not a PowerPoint concept). The development status of this project is currently **CANCELLED OR DELAYED** as the developers are currently busy with other things.
