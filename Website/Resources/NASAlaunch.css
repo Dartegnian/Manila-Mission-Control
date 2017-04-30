@@ -1,0 +1,464 @@
+/* scrollbar and Chrome shit */
+::selection {
+    background: #ee293d;
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: #000328;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+button {
+    outline: none;
+}
+@font-face {
+    font-family: "Helvetica Thin";
+    src: url(Fonts/HelveticaThin.otf);
+}
+@font-face {
+    font-family: "Helvetica Light";
+    src: url(Fonts/HelveticaLight.otf);
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.rotating.flip.cube {
+    width: 100%;
+}
+#logo {
+    width: 300px;
+    display: inline;
+}
+td {
+    font-family: Arial, sans-serif;
+}
+header {
+    height: 310px;
+    background-color: #00021a;
+    padding: 20px;
+    text-align: center;
+    background: url(Images/horizon.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+body {
+    background-color: #000328;
+    margin: 0;
+}
+h1,p.rotate.text-slide-title.primary-typo.strong {
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-family: Helvetica Light;
+    color: white;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+}
+h2 {
+    font-size: 40px;
+    color: #ee293d;
+    font-weight: normal;
+    font-family: Helvetica Thin;
+    margin: 0;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+}
+.productheader {
+    font-size: 40px;
+    color: #ee293d;
+    font-weight: normal;
+    font-family: Helvetica Thin;
+    margin: 0;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+}
+p {
+    font-family: Segoe UI Light;
+    font-size: 15px;
+    color: white;
+    margin: 0;
+    font-weight: normal;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+}
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+header img {
+    width: 400px;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+}
+header1 {
+    background: url(Images/Starry.jpg);
+}
+.header2 {
+    background-color: pink;
+    padding: 20px 20px 20px 40px;
+    text-align: center;
+    background: url(Images/PHfromSpace.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.buttinvert {
+    background: white;
+    color: #00021a;
+    transition: all .50s ease-in-out;
+    border: 0;
+    padding: 15px;
+    font: 24px "Arial";
+    font-weight: 300;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    border-radius: 3px;
+}
+.buttinvert:hover {
+    color: white;
+    background: #00021a;
+}
+.header2 img {
+    width: 400px;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+}
+.mainbody {
+    margin-top: 3%;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+#fullwidth table {
+    margin-top: 5px;
+}
+#imagecontainer {
+    float: left;
+    width: 49%;
+    margin-left: 3%;
+    padding: 2%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #00021a;
+    border-right: 0px solid #00021a;
+}
+#infospace {
+    width: 38.3%;
+    float: right;
+    padding: 2.5%;
+    padding-left: 0%;
+    margin-right: 3%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 0px solid #00021a;
+    border-right: 1px solid #00021a;
+    padding-bottom: 45px;
+}
+#image1container {
+    padding: 2%;
+}
+#image2container {
+    float: left;
+    width: 46%;
+    padding: 2%;
+}
+#image3container {
+    float: right;
+    width: 46%;
+    padding: 2%;
+}
+div#fullwidth {
+    padding: 10px 40px 10px 50px;
+    background: #00021a;
+}
+.button {
+    border: 1px solid #e5e5e5;
+    background: white;
+    padding: 5px;
+    color: #00021a;
+    font: 14px "Arial";
+    font-weight: 300;
+    transition: all .50s ease-in-out;
+    height: 30px;
+}
+.button:hover {
+    color: white;
+    background: #f1c40f;
+    transition: all .50s ease-in-out;
+}
+.inputfield {
+    height: 17px;
+    border-bottom: 1px solid #ee293d;
+    border-right: 0px solid #ee293d;
+    border-left: 0px solid #ee293d;
+    border-top: 1px solid #ee293d;
+    background: black;
+    padding: 5px;
+    color: #313233;
+    font: 14px Source Sans Pro;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+	font-family: Segoe UI Light, sans-serif;
+}
+h1.slogan {
+    top: 50%;
+    margin-top: 7%;
+    font-size: 55px;
+    font-family: Arial, sans-serif;
+}
+div#leftcontain {
+    background-color: rgba(0, 0, 0, 0.7);
+    float: left;
+    width: 40%;
+    padding: 30px;
+}
+#leftcontain h1 {
+    color: #ee293d;
+    text-align: left;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+#leftcontain p {
+    color: white;
+    font-size: 15px;
+    text-align: left;
+}
+button.contactbutt {
+    color: white;
+    background: #00021a;
+    transition: all .50s ease-in-out;
+    border: 0;
+    padding: 15px;
+    font: 24px "Arial";
+    font-weight: 300;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    float: left;
+    border-radius: 3px;
+}
+button.contactbutt:hover {
+    background: white;
+    color: #00021a;
+}
+#mainarticle {
+    float: left;
+    width: 43%;
+    margin-left: 3%;
+    padding: 1.4% 2% 1.5% 2%;
+    background: url(Images/Starry.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+#otherarticles {
+    width: 44%;
+    float: right;
+    padding: .5%;
+    margin-right: 3%;
+    background: url(Images/Starry.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+#articleinfo {
+    width: 100%;
+    background: url(Images/Articles/article1.jpg);
+    background-size: 100% 100%;
+}
+.leftarticlecontainer {
+    float: left;
+    width: 45.4%;
+    padding: 2%;
+}
+.rightarticlecontainer {
+    float: right;
+    width: 45.5%;
+    padding: 2%;
+}
+footer {
+    padding: 10px;
+    background-color: #00021a;
+    overflow: hidden;
+    padding: 20px 40px 20px 40px;
+}
+.demarticles {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.mainbody h1, #vidcontainer h1 {
+    padding: 0px 0px 0px 40px;
+    color: #ee293d;
+    text-align: left;
+}
+footer img {
+    width: 11%;
+    float: left;
+    display: inline;
+    padding: 0px 40px 0px 0px;
+}
+footer a {
+    display: inline;
+}
+.footcontain h4 {
+    color: white;
+    margin: 0px;
+	font-family: Arial, sans-serif;
+}
+.footcontain {
+    width: 20%;
+    position: relative;
+    padding: 0px 40px 0px 40px;
+    float: left;
+    text-align: left;
+}
+.footcontain p {
+    color: white;
+}
+.footcontain ul {
+    padding: 0;
+    list-style: none;
+}
+.footcontain a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+	font-family: Segoe UI Semilight, sans-serif;
+}
+#apcfooter {
+    background: url(Images/APC.jpg);
+    background-size: 100% 57%;
+    background-attachment: fixed;
+    height: 20px;
+    color: white;
+}
+#apcfooter a {
+    color: white;
+    text-decoration: none;
+}
+button.userbutt {
+    border: 1px solid #e5e5e5;
+    background: white;
+    padding: 5px;
+    color: #00021a;
+    font: 14px "Arial";
+    font-weight: 300;
+    transition: all .50s ease-in-out;
+    height: 30px;
+}
+button.userbutt:hover {
+    color: white;
+    background: #f1c40f;
+    transition: all .50s ease-in-out;
+}
+center {
+    font-family: Segoe UI Light, sans-serif;
+}
+#videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+iframe#videoContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.buttspecial {
+    background: white;
+    color: #ee293d;
+    transition: all .50s ease-in-out;
+    border: 0;
+    padding: 15px;
+    font: 24px "Arial";
+    font-weight: 300;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    border-radius: 3px;
+}
+.buttspecial:hover {
+    color: white;
+    background: #ee293d;
+}
+div#entry {
+    width: 24%;
+    height: 340px;
+    padding: 20px;
+    background-color: #00021a;
+    margin: 0px 40px;
+}
+div#entrycontainer {
+    padding: 0px;
+    text-align: center;
+}
+h6 {
+    color: white;
+    font-family: Segoe UI Black;
+    font-size: 70px;
+    background-color: #1a5dad;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px solid #ee293d;
+}
+h5 {
+    color: white;
+    font-family: Segoe UI Semibold;
+    font-size: 30px;
+    border-radius: 100px;
+    margin: 0;
+    padding: 20px 0px;
+    text-transform: capitalize;
+}
+#entry p {
+    font-style: italic;
+    font-size: 17px;
+    height: 90px;
+}
+#entry img {
+    width: 163px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.sectionimage {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+.leftimage {
+    float: left;
+}
+.rightimage {
+    float: right;
+}
