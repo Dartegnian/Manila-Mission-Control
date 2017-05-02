@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>MMC | Dictionary</title>
+    <title>MMC | Insert Acronym</title>
 	<link rel="stylesheet" type="text/css" href="Resources/dictionary.css">
 	<link rel="icon" type="image/png" href="Resources/Images/MMClogo.png">
 	<meta name="viewport" content="width=device-width" />
