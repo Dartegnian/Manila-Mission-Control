@@ -27,7 +27,7 @@
 <div class="mainbody">
     <div id="stuffcontainer">
         <h1>Search for an acronym</h1>
-        <form action="acronym_search_results.php" method="post">
+        <form action="search_results.php" method="post">
             <table>
                 <tr>
                     <td>Enter acronym</td>

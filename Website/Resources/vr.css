@@ -1,6 +1,5 @@
-/* scrollbar and Chrome shit */
 ::selection {
-    background: #ee293d;
+    background: #089fcc;
     color: white;
 }
 ::-webkit-scrollbar {
