@@ -9,7 +9,6 @@ $conn = new mysqli('localhost','root','','nasa');
 	<meta name="viewport" content="width=device-width"/>
 	<script src='Resources/jquery.min.js'></script>
 	<script src='Resources/textrotator.js'></script>
-	<script src='Resources/fluidvids.js'></script>
 	<script>
 		$(document).ready(function(){
 			$(".slogan .rotate").textrotator({
