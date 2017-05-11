@@ -1,37 +1,33 @@
 <?php
-
-function check($rating_num)
-{
-    if($rating_num == null)
+    function check($rating_num)
     {
-        throw new Exception($rating_num=0);
+        if($rating_num == null)
+        {
+            throw new Exception($rating_num=0);
+        }
+        return $rating_num;
     }
-    return $rating_num;
-}
-$acronym = $_POST['acronym'];
-$meaning = $_POST['meaning'];
-@$rating = $_POST['rating'];
-
-$connection = new mysqli('localhost','root','','nasa');
-if($rating != null)
-{
-    $connection->query("update acronym_define set user_rating = $rating where acronym_def = '$acronym' and meaning_def = '$meaning'");
-}
-$result = $connection -> query("select * from acronym_define where acronym_def = '$acronym' and meaning_def= '$meaning'");
-
-$numrows = $result -> num_rows;
-
-for($i=0;$i<$numrows;$i++)
-{
-    $row = $result -> fetch_assoc();
-    $id = $data[$i][0] = $row['id'];
-    $acronym = $data[$i][0] = $row['acronym_def'];
-    $meaning = $data[$i][0] = $row['meaning_def'];
-    $definition = $data[$i][0] = $row['definition'];
-    $user_rating = $data[$i][0] = $row['user_rating'];
-    $csourced = $data[$i][0] = $row['csourced'];
-    $contributor = $data[$i][0] = $row['contributor'];
-}
+    $acronym = $_POST['acronym'];
+    $meaning = $_POST['meaning'];
+    @$rating = $_POST['rating'];
+    $connection = new mysqli('localhost','root','','nasa');
+    if($rating != null)
+    {
+        $connection->query("update acronym_define set user_rating = $rating where acronym_def = '$acronym' and meaning_def = '$meaning'");
+    }
+    $result = $connection -> query("select * from acronym_define where acronym_def = '$acronym' and meaning_def= '$meaning'");
+    $numrows = $result -> num_rows;
+    for($i=0;$i<$numrows;$i++)
+    {
+        $row = $result -> fetch_assoc();
+        $id = $data[$i][0] = $row['id'];
+        $acronym = $data[$i][0] = $row['acronym_def'];
+        $meaning = $data[$i][0] = $row['meaning_def'];
+        $definition = $data[$i][0] = $row['definition'];
+        $user_rating = $data[$i][0] = $row['user_rating'];
+        $csourced = $data[$i][0] = $row['csourced'];
+        $contributor = $data[$i][0] = $row['contributor'];
+    }
 ?>
 <html>
 <head>
@@ -67,31 +63,32 @@ for($i=0;$i<$numrows;$i++)
         <br/><br/>
         <h6 style="margin-top: 0px;">Definition: </h6>
         <?php
-        if($definition == null)
-        {
-            echo "<h4 style='margin-top: 0px;'>[Looks like this article is devoid of all signs of life!]</h4>";
-        }
-        else
-        {
-            echo "<h4 style='margin-top: 0px;'>";
-            echo $definition;
-            echo "</h4>";
-        }
+            if($definition == null)
+            {
+                echo "<h4 style='margin-top: 0px;'>[Looks like this article is devoid of all signs of life!]</h4>";
+            }
+            else
+            {
+                echo "<h4 style='margin-top: 0px;'>";
+                echo $definition;
+                echo "</h4>";
+            }
         ?>
         <h6 style="margin-top: 0px;">User Rating: </h6>
         <?php
-        if($user_rating == null)
-        {
-            echo "<h4 style='margin-top: 0px;'>Unrated</h4>";
-        }
-        else
-        {
-            echo "<h4 style='margin-top: 0px;'>";
-            echo "$user_rating";
-            echo "</h4>";
-        }
+            if($user_rating == null)
+            {
+                echo "<h4 style='margin-top: 0px;'>Unrated</h4>";
+            }
+            else
+            {
+                echo "<h4 style='margin-top: 0px;'>";
+                echo "$user_rating";
+                echo "</h4>";
+            }
         ?>
-        <h4><?php
+        <h4>
+        <?php
             if($csourced == True)
             {
                 echo "<h6 style='margin-top: 0px;'>";
@@ -106,7 +103,7 @@ for($i=0;$i<$numrows;$i++)
                 echo "</h6>";
                 echo "<h4 style='margin-top: 0px;'>Verified/published by NASA.</h4>";
             }
-            ?>
+        ?>
         </h4>
         <h6 style="margin-top: 0px;">Contributor: </h6h4>
         <?php
@@ -122,7 +119,7 @@ for($i=0;$i<$numrows;$i++)
                 echo "NASA";
                 echo "</h4>";
             }
-            ?>
+        ?>
         <form action="rating.php"  method="post" style="color: white; font-size: 25px;">
             <h6 style="margin-top: 0px; padding-left: 0px;">If you would, please take the time to rate this article</h6>
             <br/>

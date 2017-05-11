@@ -31,42 +31,37 @@
 <div class="mainbody">
     <div id="stuffcontainer">
         <?php
-        function Redirect($url,$permanent = false)
-        {
-            header("Location: " . $url,true,$permanent ? 301:302);
-            die();
-        }
-
-        $conn = new mysqli('localhost','root','','nasa');
-        $new_content = $_POST["content"];
-        $acronym = trim($_POST['acronym']);
-        $meaning = trim($_POST['meaning']);
-
-        echo "<h1 style='margin-top: 0px; margin-bottom: 0px;'>";
-        echo $acronym;
-        echo "</h1>";
-        echo "<h6 style='margin-top: 0px;'>";
-        echo $meaning;
-        echo "</h6>";
-        echo nl2br("\n");
-        echo "<h4 style='margin-top: 0px;'>";
-        echo $new_content;
-        echo "</h4>";
-        echo nl2br("\n");
-        echo nl2br("\n");
-
-        if($new_content != null)
-        {
-            if($conn -> query("update acronym_define set definition = '$new_content' where 
-            meaning_def = trim('$meaning')") == TRUE);
-            {
-                echo "<h1 style='margin-top: 0px; margin-bottom: 0px;'>";
-                echo "Thank you for your contribution! You will be redirected automatically within five seconds";
-                echo "</h1>";
-                //sleep(5);
-                //Redirect("Location: localhost/phpstorm/nasa/acronym_search.php", false);
-            }
-        }
+			function Redirect($url,$permanent = false)
+			{
+				header("Location: " . $url,true,$permanent ? 301:302);
+				die();
+			}
+			$conn = new mysqli('localhost','root','','nasa');
+			$new_content = $_POST["content"];
+			$acronym = trim($_POST['acronym']);
+			$meaning = trim($_POST['meaning']);
+			echo "<h1 style='margin-top: 0px; margin-bottom: 0px;'>";
+			echo $acronym;
+			echo "</h1>";
+			echo "<h6 style='margin-top: 0px;'>";
+			echo $meaning;
+			echo "</h6>";
+			echo nl2br("\n");
+			echo "<h4 style='margin-top: 0px;'>";
+			echo $new_content;
+			echo "</h4>";
+			echo nl2br("\n");
+			echo nl2br("\n");
+			if($new_content != null)
+			{
+				if($conn -> query("update acronym_define set definition = '$new_content' where 
+				meaning_def = trim('$meaning')") == TRUE);
+				{
+					echo "<h1 style='margin-top: 0px; margin-bottom: 0px;'>";
+					echo "Thank you for your contribution! You will be redirected automatically within five seconds";
+					echo "</h1>";
+				}
+			}
         ?>
     </div>
 </div>

@@ -27,70 +27,66 @@
 <div class="mainbody">
     <div id="stuffcontainer">
         <?php
-        function Redirect($url,$permanent = false)
-        {
-            header("Location: " . $url,true,$permanent ? 301:302);
-            die();
-        }
-        $acronym_search = $_POST['acronym'];
-        if ($acronym_search == null)
-        {
-            Redirect("Location: localhost/phpstorm/nasa/acronym_search.php",false);
-        }
-        else
-        {
-            $arr = array();
-            $server = "localhost";
-            $user="root";
-            $pass="";
-            $db_name="nasa";
-            $connection = new mysqli($server,$user,$pass,$db_name);
-            $query = "SELECT *from acronym_masterlist where acronym like '$acronym_search%'";
-            $scndquery = "select * from acronym_masterlist where acronym like '$acronym_search'";
-            $result = $connection -> query($query);
-
-
-            $row_num = $result -> num_rows;
-
-            echo "<h1 style=\"margin-bottom: 0px;\">Search Results</h1>";
-            echo "<h6>Total Hits: " . $row_num;
-            echo "</h6>";
-            echo nl2br("\n");
-            echo nl2br("\n");
-            for($i=0; $i<$row_num; $i++)
+            function Redirect($url,$permanent = false)
             {
-                ?>
-                <form action="description_page.php" id="inform" method="post">
-                    <?php
+                header("Location: " . $url,true,$permanent ? 301:302);
+                die();
+            }
+            $acronym_search = $_POST['acronym'];
+            if ($acronym_search == null)
+            {
+                Redirect("Location: localhost/phpstorm/nasa/acronym_search.php",false);
+            }
+            else
+            {
+                $arr = array();
+                $server = "localhost";
+                $user="root";
+                $pass="";
+                $db_name="nasa";
+                $connection = new mysqli($server,$user,$pass,$db_name);
+                $query = "SELECT *from acronym_masterlist where acronym like '$acronym_search%'";
+                $scndquery = "select * from acronym_masterlist where acronym like '$acronym_search'";
+                $result = $connection -> query($query);
+                $row_num = $result -> num_rows;
+                echo "<h1 style=\"margin-bottom: 0px;\">Search Results</h1>";
+                echo "<h6>Total Hits: " . $row_num;
+                echo "</h6>";
+                echo nl2br("\n");
+                echo nl2br("\n");
+                for($i=0; $i<$row_num; $i++)
+                {
+            ?>
+            <form action="description_page.php" id="inform" method="post">
+                <?php
                     echo "<div class='infocontainer acrotainer'>";
                     $row = $result->fetch_assoc();
                     $acronym_table_toArray[$i][0] = $row['acronym'];
-                    echo $acronym_table_toArray[$i][0]; //
+                    echo $acronym_table_toArray[$i][0];
                     echo "</div>";
                     echo "<div class='infocontainer meantainer'>";
                     $acronym_table_toArray[$i][0] = $row['meaning'];
-                    echo $acronym_table_toArray[$i][0]; //
+                    echo $acronym_table_toArray[$i][0];
                     echo "</div>";
-                    ?>
-                    <input type="submit" id="explorebtn" name="submit" value="Explore"/>
-                    <?php
+                ?>
+                <input type="submit" id="explorebtn" name="submit" value="Explore"/>
+                <?php
                     $a =  $acronym[$i][0] = $row['acronym'];
                     $b = $meaning[$i][0] = $row['meaning'];
-                    ?>
-                    <input type="text" name="acronym" value="<?php echo $a ?>" style="visibility:hidden "/>
-                    <input type="text" name="meaning" value="<?php echo $b ?>" style="visibility:hidden "/>
+                ?>
+                <input type="text" name="acronym" value="<?php echo $a ?>" style="visibility:hidden "/>
+                <input type="text" name="meaning" value="<?php echo $b ?>" style="visibility:hidden "/>
                 </form>
                 <form action="rating.php" method="post">
                     <?php
-                    $a =  $acronym[$i][0] = $row['acronym'];
-                    $b = $meaning[$i][0] = $row['meaning'];
+                        $a =  $acronym[$i][0] = $row['acronym'];
+                        $b = $meaning[$i][0] = $row['meaning'];
                     ?>
                     <input type="text" name="acronym" value="<?php echo $a ?>" style="visibility:hidden"/>
                     <input type="text" name="meaning" value="<?php echo $b ?>" style="visibility:hidden"/>
                 </form>
                 <?php
             }
-
             ?>
             <h1 style="margin-bottom: 0px;">Didn't find what you were looking for?</h1>
             <h6>Submit an acronym and its definition!</h6>
@@ -176,6 +172,3 @@
 	</footer>
 </body>
 </html>
-<?php
-
-?>

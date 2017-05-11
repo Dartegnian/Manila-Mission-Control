@@ -5,34 +5,29 @@
 </head>
 <body>
 <?php
-$acronym = $_POST["acronym"];
-$meaning = $_POST['meaning'];
-$server = "localhost";
-$user = "root";
-$pass = "";
-$db_name = "nasa";
-
-$db_gen= new mysqli($server,$user,$pass);
-$db_spec = new mysqli($server,$user,$pass,$db_name);
-
-echo "Acronym: " . $acronym;
-echo nl2br("\n");
-echo "Meaning: " . $meaning;
-
-if($db_spec -> query("insert into acronym_masterlist values(default,'$acronym','$meaning')") == TRUE)
-{
-    echo "Records saved successfully";
+    $acronym = $_POST["acronym"];
+    $meaning = $_POST['meaning'];
+    $server = "localhost";
+    $user = "root";
+    $pass = "";
+    $db_name = "nasa";
+    $db_gen= new mysqli($server,$user,$pass);
+    $db_spec = new mysqli($server,$user,$pass,$db_name);
+    echo "Acronym: " . $acronym;
     echo nl2br("\n");
-}
-else
-{
-    echo "Error";
-    echo nl2br("\n");
-}
-$results = $db_spec -> query("select * from acronym_masterlist");
-echo $results;
-
-
+    echo "Meaning: " . $meaning;
+    if($db_spec -> query("insert into acronym_masterlist values(default,'$acronym','$meaning')") == TRUE)
+    {
+        echo "Records saved successfully";
+        echo nl2br("\n");
+    }
+    else
+    {
+        echo "Error";
+        echo nl2br("\n");
+    }
+    $results = $db_spec -> query("select * from acronym_masterlist");
+    echo $results;
 ?>
 <h1>Entry Form</h1>
 <form action="insert.php" method="post" enctype="multipart/form-data">

@@ -33,24 +33,22 @@
     <div id="stuffcontainer">
         <?php
             $db_connect = new mysqli("localhost","root",'','nasa');
-
             $acronym=strtoupper($_POST["new_acronym"]);
             $acronym = str_replace(' ','',$acronym);
             $meaning = ucwords(strtolower($_POST["new_meaning"]));
-
             if($db_connect -> query("insert into acronym_masterlist values('$acronym','$meaning');") == TRUE)
             {
-                ?>
-            <h4>Your contribution was successfully saved</h4>
-            <?php
-            }
-            else
+        ?>
+        <h4>Your contribution was successfully saved</h4>
+        <?php
+        	}
+        	else
             {
-            ?>
-            <h1 style="text-align: center;">Entry not valid! Entry is already in the database.</h1>
-            <?php
+        ?>
+        <h1 style="text-align: center;">Entry not valid! Entry is already in the database.</h1>
+        <?php
             }
-            ?>
+        ?>
     </div>
 </div>
 <footer>
@@ -97,6 +95,3 @@
 	</footer>
 </body>
 </html>
-<?php
-
-?>

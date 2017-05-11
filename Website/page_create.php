@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost','root','','nasa');
+	$conn = new mysqli('localhost','root','','nasa');
 ?>
 <html>
 <head>
@@ -57,27 +57,27 @@ $conn = new mysqli('localhost','root','','nasa');
         </table>
         </form>
         <?php
-        $acronym = $_POST['acronym'];
-        $acronym = str_replace(' ','',$acronym);
-        $meaning = ucwords(strtolower($_POST['meaning']));
-        $definition = $_POST['definition'];
-        $contributor = $_POST['contributor'];
-        if($conn -> query("insert into acronym_masterlist values('$acronym','$meaning');") == TRUE)
-        {
-            if($conn->query("insert into acronym_define(acronym_def, meaning_def,definition, csourced, contributor) values ('$acronym','$meaning','$definition',TRUE,'$contributor')")
-            == TRUE)
-            {
-                echo "<h1>All Records successfully saved!</h1>";
-            }
-            else
-            {
-                echo "<h1>Records unsuccessfully saved.</h1>";
-            }
-        }
-        else
-        {
-            echo "<h1>Acronym name or meaning incorrect.</h1>";
-        }
+			$acronym = $_POST['acronym'];
+			$acronym = str_replace(' ','',$acronym);
+			$meaning = ucwords(strtolower($_POST['meaning']));
+			$definition = $_POST['definition'];
+			$contributor = $_POST['contributor'];
+			if($conn -> query("insert into acronym_masterlist values('$acronym','$meaning');") == TRUE)
+			{
+				if($conn->query("insert into acronym_define(acronym_def, meaning_def,definition, csourced, contributor) values ('$acronym','$meaning','$definition',TRUE,'$contributor')")
+				== TRUE)
+				{
+					echo "<h1>All Records successfully saved!</h1>";
+				}
+				else
+				{
+					echo "<h1>Records unsuccessfully saved.</h1>";
+				}
+			}
+			else
+			{
+				echo "<h1>Acronym name or meaning incorrect.</h1>";
+			}
         ?>
     </div>
 </div>
