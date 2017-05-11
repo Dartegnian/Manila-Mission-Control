@@ -30,7 +30,7 @@ $conn = new mysqli('localhost','root','','nasa');
 <div class="mainbody">
     <div id="stuffcontainer">
         <form action="page_create.php" method="post">
-        <p>Please enter an acronym AND it's uncontracted form to make an entry about it. Note that said acronym should be registered first in the
+        <p>Please enter an acronym AND it's full meaning to make an entry about it. Note that said acronym should be registered first in the
             acronym master list <strong>AND</strong> that it shouldn't already have a page. Otherwise, go to the desired page's location to edit it </p>
             <br/>
             <br/>
@@ -72,7 +72,7 @@ $conn = new mysqli('localhost','root','','nasa');
             }
             else
             {
-                echo "<h1>Records unsucessfully saved.</h1>";
+                echo "<h1>Records unsuccessfully saved.</h1>";
             }
         }
         else
