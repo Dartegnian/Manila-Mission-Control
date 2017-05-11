@@ -6,7 +6,7 @@ $conn = new mysqli('localhost','root','','nasa');
     <title>MMC | Create A Page</title>
 	<link rel="stylesheet" type="text/css" href="Resources/dictionary.css">
 	<link rel="icon" type="image/png" href="Resources/Images/MMClogo.png">
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width"/>
 	<script src='Resources/jquery.min.js'></script>
 	<script src='Resources/textrotator.js'></script>
 	<script src='Resources/fluidvids.js'></script>
