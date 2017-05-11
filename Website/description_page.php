@@ -29,6 +29,7 @@
         $contributor = $data[$i][0] = $row['contributor'];
     }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>MMC | <?php echo $acronym . " - " . $meaning?></title>

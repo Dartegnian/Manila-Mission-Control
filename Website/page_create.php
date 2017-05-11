@@ -1,6 +1,7 @@
 <?php
 	$conn = new mysqli('localhost','root','','nasa');
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>MMC | Create A Page</title>

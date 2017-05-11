@@ -21,6 +21,7 @@
         $contributor = $data[$i][0] = $row['contributor'];
     }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title><?php echo $acronym . " - " . $meaning?></title>
