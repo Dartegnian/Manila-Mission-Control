@@ -59,16 +59,16 @@
         }
     ?>
     <h4>
-        <?php
-            if($csourced == True)
-            {
-                echo "Status: Modified by a third party";
-            }
-            else
-            {
-                echo "Status: Verified";
-            }
-        ?>
+    <?php
+        if($csourced == True)
+        {
+            echo "Status: Modified by a third party";
+        }
+        else
+        {
+            echo "Status: Verified";
+        }
+    ?>
     </h4>
     <h4>Contributor: </h4>
     <h4>

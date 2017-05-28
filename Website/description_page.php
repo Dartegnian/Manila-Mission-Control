@@ -53,7 +53,9 @@
 		<h1 style="display: inline;"> <a href="index.html"><img id="logo" src="Resources\Images\MMCwordmark.png"/></a></h1>
 	</div>
 	<header id="header1">
-		<h1 class="slogan"><span class="rotate">NASA'S MANILA INFORMATION CENTER, WHERE DREAMERS ARE BORN, AND SCIENTISTS COME TO PLAY, START YOUR MISSION TODAY</span></h1>
+		<h1 style="display: inline;"> <a href="index.html">
+			<img id="logo" src="Resources\Images\MMCwordmark.png"/>
+		</a></h1>
 		<button class="buttinvert" onclick="Redirect()">Launch Idea</button>
 	</header>
 <div class="mainbody">

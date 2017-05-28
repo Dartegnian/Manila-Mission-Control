@@ -19,12 +19,14 @@
 </head>
 <body>
 <div id="fullwidth" style="height: 65px;">
-		<h1 style="display: inline;"> <a href="index.html"><img id="logo" src="Resources\Images\MMCwordmark.png"/></a></h1>
-	</div>
-	<header id="header1">
-		<h1 class="slogan"><span class="rotate">NASA'S MANILA INFORMATION CENTER, WHERE DREAMERS ARE BORN, AND SCIENTISTS COME TO PLAY, START YOUR MISSION TODAY</span></h1>
-		<button class="buttinvert" onclick="Redirect()">Launch Idea</button>
-	</header>
+	<h1 style="display: inline;"><a href="index.html">
+        <img id="logo" src="Resources\Images\MMCwordmark.png"/>
+    </a></h1>
+</div>
+<header id="header1">
+    <h1 class="slogan"><span class="rotate">NASA'S MANILA INFORMATION CENTER, WHERE DREAMERS ARE BORN, AND SCIENTISTS COME TO PLAY, START YOUR MISSION TODAY</span></h1>
+	<button class="buttinvert" onclick="Redirect()">Launch Idea</button>
+</header>
 <div class="mainbody">
     <div id="stuffcontainer">
         <?php
@@ -86,8 +88,8 @@
                     <input type="text" name="acronym" value="<?php echo $a ?>" style="visibility:hidden"/>
                     <input type="text" name="meaning" value="<?php echo $b ?>" style="visibility:hidden"/>
                 </form>
-                <?php
-            }
+            <?php
+                }
             ?>
             <h1 style="margin-bottom: 0px;">Didn't find what you were looking for?</h1>
             <h6>Submit an acronym and its definition!</h6>
@@ -124,8 +126,7 @@
                 <br/>
             </form>
         <?php
-        }
-
+            }
         ?>
     </div>
 </div>
